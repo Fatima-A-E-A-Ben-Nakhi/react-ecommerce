@@ -28,8 +28,10 @@ export const ProductList = (props: ContentAreaProps) => {
               </p>
             </div>
 
+            
+            />
             <img
-              src={`./src/Assets/Product_Images/${item.image_link}`}
+              src={new URL(`../Assets/Product_Images/${item.image_link}`, import.meta.url).href}
               alt={item.name}
               style={{
                 borderRadius: '6px'
