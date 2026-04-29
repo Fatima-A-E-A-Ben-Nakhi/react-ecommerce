@@ -33,7 +33,7 @@ export const ProductList = (props: ContentAreaProps) => {
             </div>
 
             
-            />
+          
             <img
               src={productImages[`../Assets/Product_Images/${item.image_link}`]}
               alt={item.name}
