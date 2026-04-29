@@ -29,12 +29,12 @@ export const ProductList = (props: ContentAreaProps) => {
             </div>
 
             <img
-              src={`./src/Assets/Product_Images/${item.image_link}`}
-              alt={item.name}
-              style={{
-                borderRadius: '6px'
-              }}
-            />
+  src={new URL(`../Assets/Product_Images/${item.image_link}`, import.meta.url).href}
+  alt={item.name}
+  style={{
+    borderRadius: '6px'
+  }}
+/>
 
             <button
               value={item.id}
