@@ -12,11 +12,7 @@ type ContentAreaProps = {
   itemList: Product[]
   addToBasket: (productId: number) => void
 }
-const productImages = import.meta.glob('../Assets/Product_Images/*', {
-  eager: true,
-  query: '?url',
-  import: 'default'
-}) as Record<string, string>
+
 export const ProductList = (props: ContentAreaProps) => {
   return (
     <div id="productList">
@@ -32,11 +28,12 @@ export const ProductList = (props: ContentAreaProps) => {
               </p>
             </div>
 
-            
-          
             <img
-              src={productImages[`../Assets/Product_Images/${item.image_link}`]}
+              src={`./src/Assets/Product_Images/${item.image_link}`}
               alt={item.name}
+              style={{
+                borderRadius: '6px'
+              }}
             />
 
             <button
